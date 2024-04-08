@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --main-color: #8e44ad;
+    --red: #e74c3c;
+    --orange: #f39c12;
+    --light-color: #888;
+    --light-bg: #eee;
+    --black: #2c3e50;
+    --white: #fff;
+    --border: .1rem solid rgba(0, 0, 0, .2);
+}
+
+
+.video-container {
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.video-container .video {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+video {
+    border-radius: .5rem;
+    width: 100%;
+    object-fit: contain;
+}
+
+.video-container .title {
+    font-size: 2rem;
+    color: black;
+}
+
+.video-container .info {
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 10px;
+    padding-bottom: 1.5rem;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.video-container .info p {
+    font-size: 1.3rem;
+}
+
+.video-container .info p span {
+    color: var(--light-color);
+}
+
+.video-container .info i {
+    margin-right: 1rem;
+    color: var(--main-color);
+}
+
+.video-container .tutor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid grey;
+    padding: 1rem;
+}
+
+.video-container .tutor img {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+}
+
+
+.video-container .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #817d7d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
