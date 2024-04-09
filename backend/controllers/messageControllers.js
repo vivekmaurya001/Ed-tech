@@ -23,8 +23,8 @@ const sendMessage = asyncHandler(async (req, res) => {
   try {
     var message = await Message.create(newMessage);
 
-    message = await message.populate("sender", "name pic")
-    message = await message.populate("Chat")
+    message = await message.populate("sender", "name pic");
+    message = await message.populate("Chat");
     message = await User.populate(message, {
       path: "chat.users",
       select: "name pic email",
@@ -52,4 +52,4 @@ const allMessages = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = {  sendMessage ,allMessages};
+module.exports = { sendMessage, allMessages };
