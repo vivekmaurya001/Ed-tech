@@ -14,7 +14,17 @@ const path = require("path");
 
 const PORT = process.env.PORT || 5000;
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://deploy-mern-1whq.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
+
+app.get("/", (req, res) => {
+  res.json("Hello");
+});
 
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
@@ -24,30 +34,30 @@ app.use("/api/course", CourseRoutes);
 
 // --------------------------deployment------------------------------
 
-const __dirname1 = path.resolve();
+// const __dirname1 = path.resolve();
 
-console.log("__dirname1:", __dirname1);
+// console.log("__dirname1:", __dirname1);
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname1, "/frontend01/build")));
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname1, "/frontend01/build")));
 
-  console.log(
-    "Resolved path for static assets:",
-    path.join(__dirname1, "frontend01", "build")
-  );
+//   console.log(
+//     "Resolved path for static assets:",
+//     path.join(__dirname1, "frontend01", "build")
+//   );
 
-  app.get("*", (req, res) =>
-    res.sendFile(path.resolve(__dirname1, "frontend01", "build", "index.html"))
-  );
-  console.log(
-    "Resolved path for index.html:",
-    path.resolve(__dirname1, "frontend01", "build", "index.html")
-  );
-} else {
-  app.get("/", (req, res) => {
-    res.send("API is running..");
-  });
-}
+//   app.get("*", (req, res) =>
+//     res.sendFile(path.resolve(__dirname1, "frontend01", "build", "index.html"))
+//   );
+//   console.log(
+//     "Resolved path for index.html:",
+//     path.resolve(__dirname1, "frontend01", "build", "index.html")
+//   );
+// } else {
+//   app.get("/", (req, res) => {
+//     res.send("API is running..");
+//   });
+// }
 
 // --------------------------deployment------------------------------
 
