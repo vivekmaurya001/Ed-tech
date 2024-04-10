@@ -94,6 +94,7 @@ const Login2 = () => {
         position: "bottom",
       });
       setLoading(false);
+      console.log(error);
     }
   };
   return (
