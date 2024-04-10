@@ -16,11 +16,11 @@ import { useNavigate } from 'react-router-dom'
 const HomePage = () => {
   const navigate=useNavigate();
     useEffect(()=>{
-        // const userInfo=JSON.parse(localStorage.getItem("userinfo"))
+        const userInfo=JSON.parse(localStorage.getItem("userinfo"))
 
-        // if(userInfo){
-        //     navigate("/chats")
-        // }
+        if(userInfo){
+            navigate("/chats")
+        }
     },[navigate])
   return (
    <>
