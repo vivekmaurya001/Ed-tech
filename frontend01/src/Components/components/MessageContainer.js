@@ -59,7 +59,7 @@ const MessageContainer = ({ fetchAgain, setFetchAgain }) => {
         },
       };
       const { data } = await axios.get(
-        `/api/message/${selectedChat._id}`,
+        `https://ed-tech-1-u5wg.onrender.com/api/message/${selectedChat._id}`,
         config1
       );
 
@@ -93,7 +93,7 @@ const MessageContainer = ({ fetchAgain, setFetchAgain }) => {
           },
         };
         const { data } = await axios.post(
-          `/api/message`,
+          `https://ed-tech-1-u5wg.onrender.com/api/message`,
           {
             chatId: selectedChat._id,
             content: newmessage,
