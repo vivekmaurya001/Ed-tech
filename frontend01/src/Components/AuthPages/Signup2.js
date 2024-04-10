@@ -71,7 +71,7 @@ const Signup2 = () => {
         },
       };
       const { data } = await axios.post(
-        `/api/user`,
+        `https://ed-tech-1-u5wg.onrender.com/api/user`,
         {
           email: email,
           password: password,
