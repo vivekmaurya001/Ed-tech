@@ -57,7 +57,7 @@ const Login2 = () => {
         },
       };
       const { data } = await axios.post(
-        `/api/user/login`,
+        `https://ed-tech-1-u5wg.onrender.com/api/user/login`,
         {
           email: email,
           password: password,
