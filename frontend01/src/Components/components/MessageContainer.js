@@ -17,7 +17,7 @@ import MessageItem from "./MessageItem";
 import io from "socket.io-client";
 import Lottie from "react-lottie";
 import animationData from "../components/animation/Animation.json";
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://ed-tech-1-u5wg.onrender.com/";
 var socket, selectedChatCompare;
 
 const MessageContainer = ({ fetchAgain, setFetchAgain }) => {
@@ -59,7 +59,7 @@ const MessageContainer = ({ fetchAgain, setFetchAgain }) => {
         },
       };
       const { data } = await axios.get(
-        `https://ed-tech-1-u5wg.onrender.com/api/message/${selectedChat._id}`,
+        `https://ed-tech-1-u5wg.onrender.com//api/message/${selectedChat._id}`,
         config1
       );
 
@@ -93,7 +93,7 @@ const MessageContainer = ({ fetchAgain, setFetchAgain }) => {
           },
         };
         const { data } = await axios.post(
-          `https://ed-tech-1-u5wg.onrender.com/api/message`,
+          `https://ed-tech-1-u5wg.onrender.com//api/message`,
           {
             chatId: selectedChat._id,
             content: newmessage,
@@ -170,7 +170,7 @@ const MessageContainer = ({ fetchAgain, setFetchAgain }) => {
 
   return (
     <>
-      <Stack h="84%">
+      <Stack h="80%" overflowY="scroll">
         {loading ? (
           <Spinner alignSelf="Center" size="xl" />
         ) : (
@@ -188,26 +188,29 @@ const MessageContainer = ({ fetchAgain, setFetchAgain }) => {
           </div>
         ) : null}
       </Stack>
-      <FormControl>
-        <InputGroup>
+      <FormControl w="100%" h="80px">
+        <InputGroup w="100%" h="100%" display="flex" justifyContent="center">
           <Input
-            bottom="0"
+            w="70%"
+            h="60%"
+            bgColor="#edede9"
             type="text"
             placeholder="Enter the message......."
-            border="1.6px solid grey"
             value={newmessage}
             onChange={typingHandler}
             onKeyDown={handleKeyPress}
           />
-          <InputRightElement width="4.5rem">
+          <InputRightElement width="4rem" height="4rem" alignSelf="center">
             <Button
-              h="1.75rem"
-              size="sm"
+              h="3.5rem"
+              w="3.5rem"
+              borderRadius="50%"
+              bgColor="#0096c7"
               onClick={() => {
                 SendMessage();
               }}
             >
-              <i class="fas fa-paper-plane"></i>
+              <i style={{ color: "white" }} class="fas fa-paper-plane"></i>
             </Button>
           </InputRightElement>
         </InputGroup>
