@@ -34,7 +34,7 @@ const CoursesPage = ({ setdomainObj }) => {
           Authorization: `Bearer ${user.auhToken}`,
         },
       };
-      const { data } = await axios.get("/api/course/fetch");
+      const { data } = await axios.get("https://ed-tech-1-u5wg.onrender.com/api/course/fetch");
       console.log(data);
       setTotalCourses(data);
     } catch (error) {
