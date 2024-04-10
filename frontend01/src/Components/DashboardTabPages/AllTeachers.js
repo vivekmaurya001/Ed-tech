@@ -28,7 +28,7 @@ const AllTeachers = () => {
     try {
       setLoading(true);
 
-      const { data } = await axios.get(`/api/teacher?search=`);
+      const { data } = await axios.get(`https://ed-tech-1-u5wg.onrender.com/api/teacher?search=`);
       setLoading(false);
       SetsearchResults(data);
       console.log(data);
