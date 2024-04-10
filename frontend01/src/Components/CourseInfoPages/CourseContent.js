@@ -71,7 +71,7 @@ const CourseContent = () => {
         },
       };
       const { data } = await axios.put(
-        "/api/user/update",
+        "https://ed-tech-1-u5wg.onrender.com/api/user/update",
         {
           courseId: selctedCourse._id,
         },
