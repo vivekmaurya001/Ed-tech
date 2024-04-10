@@ -93,7 +93,7 @@ const MessageContainer = ({ fetchAgain, setFetchAgain }) => {
           },
         };
         const { data } = await axios.post(
-          `https://ed-tech-1-u5wg.onrender.com//api/message`,
+          `https://ed-tech-1-u5wg.onrender.com/api/message`,
           {
             chatId: selectedChat._id,
             content: newmessage,
