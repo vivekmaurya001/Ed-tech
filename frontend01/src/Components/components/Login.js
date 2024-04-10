@@ -53,7 +53,7 @@ const Login = () => {
           "Content-Type": "application/json",
         },
       };
-      const { data } = await axios.post(`/api/user/login`, {
+      const { data } = await axios.post(`https://ed-tech-1-u5wg.onrender.com/api/user/login`, {
        email:email,password:password ,
             }, config);
 
