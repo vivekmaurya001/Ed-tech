@@ -58,7 +58,7 @@ const GroupChatModal = () => {
         },
       };
 
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(`https://ed-tech-1-u5wg.onrender.com/api/user?search=${search}`, config);
       setLoading(false);
       SetsearchResults(data);
     } catch (error) {
@@ -121,7 +121,7 @@ const GroupChatModal = () => {
         },
       };
       const { data } = await axios.post(
-        `/api/chat/group`,
+        `https://ed-tech-1-u5wg.onrender.com/api/chat/group`,
         {
           name: groupname,
           users: JSON.stringify(selectedUsers.map((u) => u._id)),
