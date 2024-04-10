@@ -71,7 +71,7 @@ const CourseContent = () => {
         },
       };
       const { data } = await axios.put(
-        "https://ed-tech-1-u5wg.onrender.com/api/user/update",
+        "/api/user/update",
         {
           courseId: selctedCourse._id,
         },
@@ -211,9 +211,9 @@ const CourseContent = () => {
               alt="Caffe Latte"
             />
           </Flex>
-          <Flex color="white" p="2rem">
-            <Box w="90%">
-              <Stack p="1rem" w="60%">
+          <Flex color="white" p="2rem" minH="80%" bgColor="black">
+            <Box w="90%" bgColor="black">
+              <Stack p="1rem" w="60%" bgColor="black">
                 <Heading>Course Structure</Heading>
                 <Accordion allowToggle border="1px solid grey" color="black">
                   {Object.entries(moduleVideos).map(([moduleName, videos]) => (
