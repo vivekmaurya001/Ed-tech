@@ -26,7 +26,7 @@ const MyChats = ({ fetchAgain, setSwitchTab, switchTab }) => {
           Authorization: `Bearer ${user.auhToken}`,
         },
       };
-      const { data } = await axios.get("/api/chat", config);
+      const { data } = await axios.get("https://ed-tech-1-u5wg.onrender.com/api/chat", config);
       console.log(data);
       setChats(data);
     } catch (error) {
