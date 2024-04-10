@@ -53,7 +53,7 @@ const SearchDrawer = () => {
         },
       };
 
-      const { data } = await axios.get(`/api/course?search=${search}`);
+      const { data } = await axios.get(`https://ed-tech-1-u5wg.onrender.com/api/course?search=${search}`);
       setLoading(false);
       SetsearchResults(data);
     } catch (error) {
