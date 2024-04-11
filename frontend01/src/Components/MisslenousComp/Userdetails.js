@@ -161,7 +161,7 @@ const Userdetails = () => {
             </Button>
             <Flex flexDirection="column" fontSize={"20px"}>
               <b>{VediosCompleted}</b>
-              Vedios completed
+              Videos completed
             </Flex>
           </Box>
           <Box
