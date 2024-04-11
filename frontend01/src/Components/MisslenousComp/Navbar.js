@@ -45,7 +45,7 @@ const Navbar = () => {
     >
       <Flex gap={"2rem"} alignItems={"center"}>
         <Text fontSize="30px" color="white">
-          Loop Academy
+          Course AI
         </Text>
         <SearchDrawer />
       </Flex>
