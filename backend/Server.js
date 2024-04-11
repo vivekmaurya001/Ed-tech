@@ -66,7 +66,7 @@ const server = app.listen(PORT, () => {
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "https://ed-tech-i65z-fz9jyx2is-vivek-mauryas-projects.vercel.app/",
+    origin: "https://ed-tech-i65z-5lrwbswjo-vivek-mauryas-projects.vercel.app",
   },
 });
 
