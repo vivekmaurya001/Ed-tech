@@ -17,7 +17,7 @@ import MessageItem from "./MessageItem";
 import io from "socket.io-client";
 import Lottie from "react-lottie";
 import animationData from "../components/animation/Animation.json";
-const ENDPOINT = "https://ed-tech-1-u5wg.onrender.com/";
+const ENDPOINT = "https://ed-tech-1-u5wg.onrender.com";
 var socket, selectedChatCompare;
 
 const MessageContainer = ({ fetchAgain, setFetchAgain }) => {
