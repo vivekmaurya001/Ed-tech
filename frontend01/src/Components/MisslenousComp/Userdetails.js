@@ -73,8 +73,7 @@ const Userdetails = () => {
             <Text>{formattedDate}</Text>
           </Box>
           <Button gap={"1rem"} ref={btnRef} onClick={onOpen}>
-            <i style={{ color: "black" }} class="fas fa-calendar"></i>
-            Jan-Feb 2020
+            Progress
           </Button>
         </Flex>
         <Card
@@ -276,7 +275,7 @@ const Userdetails = () => {
                   <i class="fa fa-file-code-o" aria-hidden="true"></i>
                 </Button>
                 <Text fontWeight={"bold"} fontSize={25}>
-                  8
+                  {VediosCompleted}
                 </Text>
               </Flex>
               <b style={{ alignSelf: "flex-start" }}>Total Watchmins</b>
